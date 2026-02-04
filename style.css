@@ -1,0 +1,518 @@
+/* =========================
+   Base Reset
+========================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", "Poppins", sans-serif;
+  background-color: #f9fafb;
+  color: #222;
+  line-height: 1.7;
+}
+
+/* =========================
+   Global
+========================= */
+section {
+  max-width: 800px;
+  margin-left: 80px;
+  margin-right: auto;
+  padding: 80px 24px;
+}
+
+/* Supaya di mobile tidak rusak */
+@media (max-width: 768px) {
+  section {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+h1, h2, h3 {
+  font-weight: 600;
+  letter-spacing: -0.3px;
+}
+
+h2 {
+  font-size: 2.2rem;
+  margin-bottom: 24px;
+  position: relative;
+}
+
+h2::after {
+  content: "";
+  width: 40px;
+  height: 3px;
+  background-color: #2563eb;
+  display: block;
+  margin-top: 10px;
+}
+
+p {
+  color: #444;
+}
+
+/* =========================
+   Hero
+========================= */
+#hero {
+  background-color: #ffffff;
+  padding: 100px 24px 80px;
+  text-align: center;
+}
+
+.profile-photo {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 24px;
+  border: 4px solid #e5e7eb;
+}
+
+#hero h1 {
+  font-size: 2.2rem;
+  margin-bottom: 8px;
+}
+
+.role {
+  font-size: 1rem;
+  color: #2563eb;
+  font-weight: 500;
+}
+
+/* =========================
+   About
+========================= */
+#about p {
+  max-width: 700px;
+  margin-bottom: 24px;
+  font-size: 1.05rem;
+  line-height: 1.9;
+}
+
+.text-justify {
+  text-align: justify;
+  text-justify: inter-word;
+  hyphens: auto;
+}
+
+.biodata {
+  list-style: none;
+}
+
+.biodata li {
+  margin-bottom: 8px;
+  color: #333;
+}
+
+/* =========================
+   Skills
+========================= */
+.skills-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+}
+
+.skills-column h3 {
+  font-size: 1.1rem;
+  margin-bottom: 16px;
+}
+
+.skills-column ul {
+  list-style: none;
+}
+
+.skills-column li {
+  padding: 8px 0;
+  border-bottom: 1px solid #e5e7eb;
+  color: #444;
+}
+
+/* =========================
+   Experience
+========================= */
+.experience-item {
+  background-color: #ffffff;
+  padding: 24px;
+  border-radius: 12px;
+  margin-bottom: 24px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.04);
+}
+
+.experience-item h3 {
+  font-size: 1.1rem;
+  margin-bottom: 4px;
+}
+
+.company {
+  font-size: 0.9rem;
+  color: #2563eb;
+}
+
+.date {
+  display: block;
+  font-size: 0.85rem;
+  color: #666;
+  margin-bottom: 16px;
+}
+
+.experience-item ul {
+  padding-left: 18px;
+}
+
+.experience-item li {
+  margin-bottom: 8px;
+  color: #444;
+}
+
+/* =========================
+   Contact
+========================= */
+.contact-list {
+  list-style: none;
+}
+
+.contact-list li {
+  margin-bottom: 12px;
+}
+
+.contact-list a {
+  color: #2563eb;
+  text-decoration: none;
+}
+
+.contact-list a:hover {
+  text-decoration: underline;
+}
+
+/* =========================
+   Footer
+========================= */
+footer {
+  text-align: center;
+  padding: 32px 24px;
+  font-size: 0.85rem;
+  color: #666;
+}
+
+/* =========================
+   Responsive
+========================= */
+@media (max-width: 768px) {
+  section {
+    padding: 60px 20px;
+  }
+
+  .skills-container {
+    grid-template-columns: 1fr;
+  }
+
+  #hero h1 {
+    font-size: 1.8rem;
+  }
+}
+
+/* =========================
+   Dark Mode Variables
+========================= */
+body.dark {
+  background-color: #0f172a;
+  color: #e5e7eb;
+}
+
+body.dark section {
+  background-color: transparent;
+}
+
+body.dark p,
+body.dark li {
+  color: #cbd5f5;
+}
+
+body.dark h1,
+body.dark h2,
+body.dark h3 {
+  color: #f8fafc;
+}
+
+body.dark h2::after {
+  background-color: #60a5fa;
+}
+
+/* Card */
+body.dark .experience-item {
+  background-color: #020617;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.4);
+}
+
+/* Links */
+body.dark a {
+  color: #60a5fa;
+}
+
+/* Hero */
+body.dark #hero {
+  background-color: #020617;
+}
+
+body.dark .profile-photo {
+  border-color: #1e293b;
+}
+
+/* Divider */
+body.dark .skills-column li {
+  border-bottom: 1px solid #1e293b;
+}
+
+/* HOVER EFFECT */
+.experience-item {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.experience-item:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 40px rgba(0,0,0,0.08);
+}
+
+a {
+  position: relative;
+}
+
+a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 0%;
+  height: 2px;
+  background-color: currentColor;
+  transition: width 0.3s ease;
+}
+
+a:hover::after {
+  width: 100%;
+}
+
+.skills-column li {
+  transition: padding-left 0.3s ease, color 0.3s ease;
+}
+
+.skills-column li:hover {
+  padding-left: 8px;
+  color: #2563eb;
+}
+
+body.dark .skills-column li:hover {
+  color: #60a5fa;
+}
+
+/* SCROLL ANIMATION */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  animation: fadeUp 0.8s ease forwards;
+  animation-timeline: view();
+  animation-range: entry 0% cover 30%;
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* =========================
+   Navbar
+========================= */
+.navbar {
+  width: 100%;
+  background: linear-gradient(90deg, #020617, #020617);
+  padding: 16px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 1px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Dorong menu ke kanan */
+.nav-menu {
+  margin-left: auto;
+  margin-right: 24px;
+}
+
+/* =========================
+   Logo
+========================= */
+.logo {
+  font-size: 1.1rem;
+  color: #e5e7eb;
+}
+
+.logo span {
+  color: #a5b4fc;
+  font-weight: 500;
+}
+
+.logo strong {
+  font-weight: 700;
+}
+
+/* =========================
+   Menu
+========================= */
+.nav-menu {
+  display: flex;
+  gap: 28px;
+}
+
+.nav-menu a {
+  color: #cbd5f5;
+  text-decoration: none;
+  font-size: 0.9rem;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.nav-menu a:hover {
+  color: #ffffff;
+}
+
+/* Active underline */
+.nav-menu a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0%;
+  height: 2px;
+  background-color: #6366f1;
+  transition: width 0.3s ease;
+}
+
+.nav-menu a:hover::after,
+.nav-menu a.active::after {
+  width: 100%;
+}
+
+/* =========================
+   Button
+========================= */
+.btn-contact {
+  padding: 8px 18px;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #6366f1, #4f46e5);
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 500;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-contact:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(99,102,241,0.4);
+}
+
+/* =========================
+   Responsive
+========================= */
+@media (max-width: 768px) {
+  .nav-menu {
+    display: none;
+  }
+}
+
+/*Decorative Line*/
+section {
+  position: relative;
+}
+
+section::before {
+  content: "";
+  position: absolute;
+  left: -40px;
+  top: 80px;
+  width: 2px;
+  height: 60%;
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    #6366f1,
+    transparent
+  );
+}
+
+/* Soft Glow Background */
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: radial-gradient(
+    circle at 20% 30%,
+    rgba(99,102,241,0.08),
+    transparent 60%
+  );
+  pointer-events: none;
+}
+
+/* =========================
+   Video Portfolio
+========================= */
+
+#portfolio-video {
+  margin-top: 40px;
+}
+
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 32px;
+  margin-top: 32px;
+}
+
+.video-card {
+  background-color: #020617;
+  padding: 16px;
+  border-radius: 14px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.35);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.video-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 45px rgba(0,0,0,0.5);
+}
+
+.video-card video {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 12px;
+}
+
+.video-card h3 {
+  font-size: 1rem;
+  margin-bottom: 6px;
+  color: #f8fafc;
+}
+
+.video-card p {
+  font-size: 0.85rem;
+  color: #cbd5f5;
+}
+
