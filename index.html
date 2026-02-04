@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="eng">
-    <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="style.css">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,6 +15,11 @@
     <!-- Logo -->
     <div class="logo">
       <span>Vincentius</span><strong>Januardi</strong>
+    </div>
+
+    <!-- Hamburger Button -->
+    <div class="menu-toggle" onclick="toggleMenu()">
+      &#9776;
     </div>
 
     <!-- Navigation -->
@@ -40,9 +45,9 @@
     </p>
 
     <ul class="biodata">
-      <li><strong>Domisili:</strong> Banjarmasin Barat, Kalimantan Selatan</li>
-      <li><strong>Pendidikan:</strong> SMK Negeri 1 Banjarmasin (2020-2023)</li>
-      <li><strong>Bahasa:</strong> Indonesia, English (Basic)</li>
+      <li><strong>Domisili :</strong> Banjarmasin Barat, Kalimantan Selatan</li>
+      <li><strong>Pendidikan :</strong> SMK Negeri 1 Banjarmasin (2020-2023)</li>
+      <li><strong>Bahasa :</strong> Indonesia, English (Basic)</li>
     </ul>
   </section>
 
@@ -102,7 +107,6 @@
   </div>
 </section>
 
-
   <!-- Experience -->
   <section id="experience">
     <h2>Internship Experience</h2>
@@ -151,6 +155,12 @@
   <footer>
     <p>© 2026 Vincentius Januardi. All rights reserved.</p>
   </footer>
+
+ <script>
+  function toggleMenu() {
+    document.getElementById("navMenu").classList.toggle("active");
+  }
+</script>
 
 </body>
 </html>
