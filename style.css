@@ -516,3 +516,40 @@ body::after {
   color: #cbd5f5;
 }
 
+/* Navbar mobile */
+.menu-toggle {
+  display: none;
+  font-size: 26px;
+  cursor: pointer;
+  color: white;
+}
+
+/* Mobile view */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-menu {
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    background: #111;
+    display: none;
+    flex-direction: column;
+    padding: 15px;
+    border-radius: 10px;
+  }
+
+  .nav-menu a {
+    padding: 10px 0;
+  }
+
+  .nav-menu.active {
+    display: flex;
+  }
+
+  .btn-contact {
+    display: none; /* optional, biar rapi di mobile */
+  }
+}
